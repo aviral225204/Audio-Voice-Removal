@@ -1,0 +1,120 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Audio Denoise (Low-pass) — Web Version</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- COLLEGE LOGO SECTION -->
+<div class="college-logo">
+  <img src="https://th.bing.com/th/id/OIP.vr-VJMfumfI0HoN6Y_qBVgHaHa?w=155&h=150&c=6&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="College Logo">
+  <h2 class="college-name">Shri Ramswaroop Memorial University</h2>
+</div>
+
+    <!-- PROJECT TITLE -->
+<div class="project-title">
+  <h1>Project Name: Audio Voice Removal System</h1>
+</div>
+
+    <!-- TEAM SECTION -->
+
+  <div class="card">
+    <h1> Audio Voice Removal System — Low-pass filter</h1>
+    <p class="small">Upload a WAV/MP3 file, preview waveform, apply a low-pass filter in the browser, play & download the processed audio.</p>
+
+    <label>Choose audio file (WAV/MP3)</label>
+    <div class="row">
+      <input id="file" type="file" accept="audio/*">
+      <div class="controls">
+        <button id="playOriginal" disabled>Play Original</button>
+        <button id="stop" disabled>Stop</button>
+      </div>
+    </div>
+
+    <label>Low-pass cutoff frequency: <span id="cutoffLabel">3000</span> Hz</label>
+    <div class="row">
+      <input id="cutoff" class="slider" type="range" min="300" max="12000" value="3000">
+      <label class="small">Q (resonance): <input id="q" type="number" min="0.1" max="30" step="0.1" value="1"></label>
+    </div>
+
+    <div style="margin-top:10px" class="row">
+      <button id="process" disabled>Process &amp; Download</button>
+      <a id="downloadLink" class="download-link" style="display:none">Download Processed WAV</a>
+      <button id="playProcessed" disabled>Play Processed</button>
+      <button id="deleteAll">Delete Audio</button>
+    </div>
+
+    <div style="margin-top:16px">
+      <div class="flex-between"><div class="small muted">Original</div><div class="small muted">Processed</div></div>
+      <canvas id="origWave"></canvas>
+      <canvas id="procWave" style="margin-top:8px"></canvas>
+    </div>
+
+    <footer>
+      <div class="small">Tip: Lower cutoff removes high-frequency noise but may reduce clarity. Use 2–4 kHz for speech.</div>
+      
+      <!-- TEACHER / GUIDE SECTION -->
+<div class="teacher-section">
+  <h2>Guided By</h2>
+
+  <div class="teacher-card">
+    <h3>Anand Prakash Pandey</h3>
+    <p>Department of Electronics / Computer Science</p>
+  </div>
+</div>
+
+<!--TEAM MEMBERS-->
+      <div class="team-section">
+  <h2>Team Members</h2>
+
+  <div class="team-list">
+
+    <a href="https://www.linkedin.com/in/aviral-verma-140648296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="member-link">
+      <div class="member">
+        <h3>Aviral Verma</h3>
+        <p>202310101110050</p>
+      </div>
+    </a>
+
+    <a href="https://www.linkedin.com/in/udit-pandey-2054b231a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="member-link">
+      <div class="member">
+        <h3>Udit Raj Pandey</h3>
+        <p>Roll No:202310101110007</p>
+      </div>
+    </a>
+
+    <a href="https://www.linkedin.com/in/ritesh-pandey-897290248?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="member-link">
+      <div class="member">
+        <h3>Ritesh Pandey</h3>
+        <p>Roll No:202310101110038</p>
+      </div>
+    </a>
+
+    <a href="https://www.linkedin.com/in/thesumitkumar876?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="member-link">
+      <div class="member">
+        <h3>Sumit Kumar</h3>
+        <p>Roll No:202310101110040</p>
+      </div>
+    </a>
+
+    <a href="https://linkedin.com/in/your-profile5" target="_blank" class="member-link">
+      <div class="member">
+        <h3>Sachin pandey</h3>
+        <p>Roll No:202310101110008</p>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
